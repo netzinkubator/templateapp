@@ -1,0 +1,131 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.full_screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%
+}
+
+#app_content {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+header,
+.screen-content {
+    position: absolute;
+    width: 100%;
+}
+
+header {
+    top: 0;
+    height: 26px;
+    padding: 7px 0;
+    background-color: #f0f;
+    color: #000;
+    z-index: 20;
+    text-align: center;
+}
+
+.screen {
+    display: block;
+    z-index: 1;
+    -webkit-transform: translate3d(0px, 1000px, 0px);
+}
+
+.screen.active {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.screen * {
+    /*-webkit-transform: translate3d(0px, 0px, 0px);*/
+}
+
+.screen-content {
+    top: 40px;
+    left:0;
+    right: 0;
+    bottom:0;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.header-title {
+    width: 60%;
+    text-align: center;    
+}
+
+.btn {
+    display: inline-block;
+    height: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+.header-btn {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    font-weight: bold;
+    padding: 8px 5px 5px 5px;
+    text-decoration: none;
+    color: #1284ff;
+    max-width: 20%;
+}
+
+.header-btn.left {
+    left: 1px;
+}
+
+.header-btn.right {
+    right: 1px;
+}
+
+/* lists */
+.list_item, 
+.list_item a {
+    display: -webkit-box;
+    height: 43px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: start;
+    -webkit-box-align: center;
+    border-bottom: 1px solid #115566;
+}
+
+.list_item a {
+    padding-left: 20px;
+    width: 95%;
+}
+
+.list_item .label {
+    display: block;
+    width: 85%;
+}
+
+
+/* Portrait layout (default) */
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
+}

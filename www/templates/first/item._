@@ -1,0 +1,13 @@
+<% if(previously_found_devices_count == 0) { %>
+    <ul id="beacons">
+<% } %>
+
+<li class="list_item">
+    <a href="#/chat/<%= data.name %>">
+        <%= data.name %>&nbsp;<br /><%= data.description %>
+    </a>
+</li>
+
+<% if(previously_found_devices_count == 0) { %>
+    </ul>
+<% } %>

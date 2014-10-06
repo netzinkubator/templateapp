@@ -1,0 +1,9 @@
+<ul id="beacons">
+    <% 
+        _.each(beacons, function(beacon) {
+    %>
+            <%= partial("beacons/item._", beacon) %>
+    <%
+        });
+    %>
+</ul>

@@ -1,0 +1,8 @@
+<form id='send_form' action="#/post_message" method="post">
+    <input id='send_message' type="text" name="send_message" />
+    <input id='send_button' type='submit' value='Send'/>
+</form>
+
+<div id="room">
+    <div id="messages"></div>
+</div>

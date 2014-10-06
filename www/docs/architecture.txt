@@ -1,0 +1,50 @@
+this doc describes the basic architecture of this project.
+
+this is the basic structure of an SPA app that can be ran as phonegapapp.
+it can also run in browser, but some optimizations need to be made (like loading of the js files, templates and so on)
+
+the folder structure:
+
+* css - the css files
+
+* docs - the docs
+
+* img - any images used in css, js
+
+* js - the js source code, described below
+
+* l10n - contains any localization files
+this aspect is mostly ignored in the beginnig, making it harder to offer multiple languages later on, so we make sure that from beginning these are consideres
+
+* templates - contains all the templates for generating the screens and controls
+by default the underscore templating engine is used, the reasons for that are:
+- the syntax is very simple and similar to ejs, rails and php
+- the performance is quite good
+
+we have provided an optimizied plugin for the underscore template engine.
+
+The JS folder
+
+this has the following structure:
+
+* components - are any reusable parts that have both logic and ui
+
+* config - the config files
+
+* controllers - the code that implements the business logic of the app.
+the entry points are routes and events
+
+* helpers - any support code for the app
+
+* lib - 3rd parties libraries or any extensions to them
+
+* modules - code for standalone functionality, like code for geo processing, validators and so on
+
+* service - is the service layer of the app, the code that interacts with an api on the server or any other libraries.
+this is where all the ajax calls should be contained
+
+* the ui - contains all the code that deals with the generations and ui interaction.
+these components are called from the controllers. but they do not call the controller.
+they might generated events/messages that are treated in controllers
+
+app.js - the starting point of the app

@@ -1,0 +1,12 @@
+<header>
+    <% if(!top) { %>
+        <a class="header-btn left btn-back" href="#"><%= templateapp.lang.text("btn_back") %></a>
+    <% } %>
+    <span class="header-title"><%= templateapp.lang.text(title_id) %></span>
+
+    <% 
+    /* will be used when we need a right button
+    <a class="header-btn right" href="#"></a>
+    */
+    %>
+</header>
