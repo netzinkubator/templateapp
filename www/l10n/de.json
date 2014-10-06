@@ -2,7 +2,7 @@
     "de": {
         "btn_cancel": "Abbruch",
         "btn_back": "Zurück",
-        "ble_list_screen_title": "BLE",
-        "chat_screen_title": "Chat"
+        "first_screen_title": "erster",
+        "second_screen_title": "zweiter"
     }
 }

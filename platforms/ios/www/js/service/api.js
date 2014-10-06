@@ -50,30 +50,21 @@ templateapp.api = (function () {
         });
     }
 
-    get_beacons_data = function(beacon_uuid, callback) {
+    get_first_list = function(callback) {
         // normally a server api would be called like this
-        //_callServer('/data/get_contacts', {}, "GET", function(response) { 
+        //_callServer('/data/get_first_list', {}, "GET", function(response) { 
         //    callback(response);
         //});
 
-        var dummy_data = {
-            "32BD683B-1028-976E-D4DD-0F0171405018": {name: "location 1", description: "cool location 1"},
-            "E7D99318-2624-3478-8561-320E3F8DED1F": {name: "location 2", description: "even cooler location 1"}
-        };
+        var dummy_data = [
+            {name: "location 1", description: "cool location 1"},
+            {name: "location 2", description: "even cooler location 1"}
+        ];
 
-        var data = dummy_data[beacon_uuid];
-
-        if(typeof(data) != "undefined") {
-            // use dummy data
-            callback({
-                data: data
-            });
-        } else {
-            console.log("beacond description not found");
-        }
+        callback(dummy_data);
     }
 
     return {
-        get_beacons_data: get_beacons_data
+        get_first_list: get_first_list
     };
 })();

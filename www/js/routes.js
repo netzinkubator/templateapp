@@ -1,15 +1,13 @@
 templateapp.routes = (function() {
     var _setup_routes = function(app_container) {
-        app_container.get('#/', templateapp.controllers.beacons.index);
-        app_container.get('#/chat/:room', templateapp.controllers.chat.index);
+        app_container.get('#/', templateapp.controllers.first.index);
+        app_container.get('#/second/:name', templateapp.controllers.second.index);
 
-        app_container.post('#/post_message', templateapp.controllers.chat.post_message);
+        // app_container.post('#/post_data', templateapp.controllers.first.post_data);
     };
 
     var _setup_events = function(app_container) {
-        app_container.bind('new_message', templateapp.controllers.chat.on_new_message);
-
-        app_container.bind('new_device', templateapp.controllers.beacons.on_new_device);
+        // app_container.bind('some_event', templateapp.controllers.first.some_event);
     };
 
     var _setup = function(app_container) {

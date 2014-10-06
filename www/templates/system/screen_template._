@@ -1,6 +1,6 @@
 <div id="<%= id %>" class="screen full_screen">
 
-    <%= partial("system/header._", {top: top, title_id: title_id}) %>
+    <%= partial("system/header._", {top_screen: top_screen, no_header: no_header, title_id: title_id}) %>
         
     <div id="<%= id %>-container" class="screen-content">
     </div>

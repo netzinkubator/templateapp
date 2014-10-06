@@ -15,15 +15,14 @@
         <!-- here will be inserted the generated screens -->
         <div id="app_content" class="full_screen"></div>
 
+        <!-- todo: dynamic load -->
+
         <!-- infrastructure -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/lib/jquery.min.js"></script>
         <script type="text/javascript" src="js/lib/sammy.min.js" ></script>
 
         <script type="text/javascript" src="js/lib/fastclick.js" ></script>
-
-        <!-- todo: dynamic load -->
-        <script type="text/javascript" src="js/lib/socket.io-1.0.6.js" ></script>
 
         <!-- templating -->
         <script type="text/javascript" src="js/lib/underscore.min.js"></script>
@@ -35,12 +34,15 @@
         <script type="text/javascript" src="js/helpers/lang.js"></script>
         <script type="text/javascript" src="js/config/config.js"></script>
         <script type="text/javascript" src="js/config/screens.js"></script>
-        <script type="text/javascript" src="js/ui/view_manager.js"></script>
-        <script type="text/javascript" src="js/ui/dialogs.js"></script>
+        <script type="text/javascript" src="js/ui/system/view_manager.js"></script>
+        <script type="text/javascript" src="js/ui/system/dialogs.js"></script>
+
         <script type="text/javascript" src="js/service/api.js"></script>
 
-        <script type="text/javascript" src="js/controllers/beacons.js"></script>
-        <script type="text/javascript" src="js/controllers/chat.js"></script>
+        <script type="text/javascript" src="js/controllers/first.js"></script>
+        <script type="text/javascript" src="js/controllers/second.js"></script>
+
+        <script type="text/javascript" src="js/ui/first.js"></script>
 
         <!-- storage -->
         <script type="text/javascript" src="js/helpers/storage.js"></script>
@@ -48,12 +50,6 @@
 
         <!-- depends on js/helpers/storage.js. todo: use requirejs -->
         <script type="text/javascript" src="js/modules/device_info.js"></script>
-
-        <script type="text/javascript" src="js/modules/chat.js"></script>
-
-        <script type="text/javascript" src="js/ui/view_manager.js"></script>
-
-        <script type="text/javascript" src="js/native/ble.js"></script>
 
         <script type="text/javascript">
             // phonegap is loaded

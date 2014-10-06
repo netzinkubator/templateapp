@@ -1,5 +1,7 @@
+<% if(!no_header) { %>
+
 <header>
-    <% if(!top) { %>
+    <% if(!top_screen) { %>
         <a class="header-btn left btn-back" href="#"><%= templateapp.lang.text("btn_back") %></a>
     <% } %>
     <span class="header-title"><%= templateapp.lang.text(title_id) %></span>
@@ -10,3 +12,5 @@
     */
     %>
 </header>
+
+<% } %>

@@ -21,35 +21,35 @@
     OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-templateapp.controllers = templateapp.controllers || {};
+templateapp.ui.first = (function () {
+    var first_button_on_click = function(some_data) {
+        templateapp.ui.dialogs.alert(some_data);
 
-templateapp.controllers.first = (function () {
-    var _screen = "first";
-
-    var index = function(cntx) {
-
-        // activates the screen and the callback is called when the screen is available
-        var back_active = templateapp.view_manager.activate_screen(cntx, _screen);
-        if(back_active) {
-            return;
-        }
-
-        this.send(function(next_callback) {
-            templateapp.api.get_first_list(next_callback);
-        
-        }).then(
-            function(items) {
-                this.render("templates/first/list._", {items: items})
-                    .then(function(content) { 
-                        templateapp.view_manager.set_screen_content(_screen, content);
-                    
-                        templateapp.ui.first.init_screen(_screen);
-                    });
-            }
-        );
+        // if a more complex function is to be done here, then this function should trigger an event
+        // which should be handled in the controller
     };
-    
+
+    var init_buttons = function(screen_id) {
+        screen_id = "#" + screen_id;
+
+        $(screen_id + " #first_button").on("click", function(e) {
+            // any data from the button or event are read here and given to the on_click function
+            var $this = $(this);
+
+            var some_data = $this.data("some_data");
+
+            first_button_on_click(some_data);
+
+            return false;
+        });
+
+    };
+
+    var init_screen = function(screen_id) {
+        init_buttons(screen_id);
+    };
+
     return {
-        index: index
+        init_screen: init_screen
     }
 })();
